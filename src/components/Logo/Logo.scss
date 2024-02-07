@@ -1,0 +1,65 @@
+.logo {
+  width: 150rem;
+  height: 83rem;
+  position: relative;
+
+  &__rhombus {
+    display: block;
+    width: 83rem;
+    height: 83rem;
+    border-radius: 6rem;
+    background: $bgLogo;
+    transform: rotate(45deg) scale(0.7);
+
+    &:not(.logo__footer-rhombus) {
+      animation: rotate 10s linear infinite;
+    }
+  }
+
+  &__footer-rhombus, .header-menu-logo {
+    background: transparent;
+    border: 2rem solid rgb(38, 193, 242);
+  }
+
+  &__txt {
+    position: absolute;
+    left: 22rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(17, 60, 73);
+    font-size: 32rem;
+    font-weight: 700;
+    line-height: 48rem;
+    letter-spacing: 0.04em;
+    user-select: none;
+  }
+
+  &__footer-txt, .menu-logo {
+    color: rgb(255, 255, 255);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(45deg) scale(0.7);
+  }
+  5% {
+    transform: rotate(90deg) scale(1);
+  }
+  10% {
+    transform: rotate(135deg) scale(0.7);
+  }
+  50% {
+    transform: rotate(135deg) scale(0.7);
+  }
+  55% {
+    transform: rotate(180deg) scale(1);
+  }
+  60% {
+    transform: rotate(225deg) scale(0.7);
+  }
+  100% {
+    transform: rotate(225deg) scale(0.7);
+  }
+}
+

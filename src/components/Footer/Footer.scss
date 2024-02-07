@@ -1,0 +1,220 @@
+.footer {
+  color: var(--white);
+  background: var(--bg-footer);
+  color: var(--c-footer);
+  font: var(--f-foter);
+  letter-spacing: 0.04em;
+
+  &__container {
+    max-width: 599rem;
+    width: 100%;
+    margin-inline: auto;
+    padding: 74rem 0 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      padding: 50rem 0 30rem;
+    }
+
+    @include mobile {
+      padding: 40rem 0 20rem;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 95rem;
+    width: 398rem;
+
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 50rem;
+    }
+  }
+
+  &__logos-skilline,
+  &__virtual-class {
+    width: 50%;
+    &:not(:last-child) {
+      border-right: var(--border-footer);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+      &:not(:last-child) {
+        border-right: none;
+        border-bottom: var(--border-footer);
+      }
+    }
+  }
+
+  &__logos-skilline {
+    padding-right: 40rem;
+    @include mobile {
+      padding-right: 0;
+      padding-bottom: 20rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__virtual-class {
+    padding-left: 40rem;
+    color: var(--white);
+    font: var(--f-li);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+
+    @include mobile {
+      padding-left: 0;
+      padding-top: 20rem;
+    }
+  }
+
+  &__forma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20rem;
+  }
+
+  &__forma-title {
+    font-size: 26rem;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+
+  &__forma-input-container {
+    display: flex;
+    gap: 20rem;
+    margin-bottom: 96rem;
+
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 60rem;
+      width: calc(100% - 20rem);
+    }
+  }
+
+  &__input {
+    width: 400rem;
+    height: 60rem;
+    box-sizing: border-box;
+    border: 1rem solid rgb(131, 131, 154);
+    border-radius: 80rem;
+    background: transparent;
+    color: var(--white);
+    padding: 15rem 30rem;
+    font: var(--f-ph-input);
+    letter-spacing: 0.04em;
+
+    &::placeholder {
+      color: var(--c-ph-input);
+      font: var(--f-ph-input);
+    }
+
+    &:focus {
+      border-color: rgb(57, 63, 207);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    @include hover-on {
+      &:hover {
+        border-color: rgb(57, 63, 207);
+      }
+    }
+  }
+
+  &__btn {
+    padding: 14rem 34rem;
+    color: var(--white);
+    font: var(--f-foter-btn);
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    border-radius: 60rem;
+    background: linear-gradient(
+      157.12deg,
+      rgb(84, 90, 231) 19.721%,
+      rgb(57, 63, 207) 78.62%
+    );
+
+    @include hover-on {
+      cursor: pointer;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    gap: 40rem;
+    margin-bottom: 20rem;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 30rem;
+      margin-bottom: 55rem;
+    }
+  }
+
+  &__li {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include mobile {
+      width: 100%;
+      justify-content: center;
+    }
+    & a {
+      color: var(--c-footer);
+      font: var(--f-li);
+      letter-spacing: 0.04em;
+      text-align: center;
+
+      @include hover-on {
+        transition: var(--transition);
+        &:hover {
+          color: var(--c-primary);
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      background: rgb(98, 99, 129);
+      position: absolute;
+      right: -20rem;
+      transform: translateX(50%);
+      width: 1rem;
+      height: calc(100% - 16rem);
+
+      @include mobile {
+        right: 0;
+        left: 50%;
+        bottom: -15rem;
+        transform: translate(-50%, -50%);
+        width: calc(max(100% - 200rem, 50rem));
+        height: 1rem;
+      }
+    }
+  }
+
+  &__about {
+    text-align: center;
+    width: calc(100% - 20rem);
+  }
+}

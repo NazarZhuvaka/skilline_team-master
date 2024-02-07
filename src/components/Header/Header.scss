@@ -1,0 +1,400 @@
+//-->> fixing the site header
+.fixed-header {
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0rem 10rem 10rem var(--bg-header);
+  & .header__container {
+    padding: 40rem 100rem;
+    @include desktop {
+      padding: 35rem 80rem;
+    }
+    @include desktop-small {
+      padding: 35rem 50rem;
+    }
+    @include tablet {
+      padding: 30rem 50rem;
+    }
+  }
+}
+
+.header {
+  &__plug {
+    width: 100%;
+    height: 203rem;
+    background: var(--bg-header);
+    display: none;
+
+    @include desktop {
+      height: 180rem;
+    }
+  }
+
+  &__plug-on {
+    display: block;
+  }
+}
+//<<-- fixing the site header
+
+.header {
+  width: 100%;
+  color: var(--white);
+  background: var(--bg-header);
+
+  &__container {
+    max-width: calc(1694rem + 200rem);
+    width: 100%;
+    margin-inline: auto;
+    padding: 60rem 100rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20rem;
+
+    @include desktop {
+      padding: 50rem 80rem;
+    }
+
+    @include desktop-small {
+      padding: 50rem 50rem;
+    }
+
+    @include tablet {
+      padding: 40rem 50rem;
+    }
+
+    @include mobile {
+      padding: 20rem 50rem;
+    }
+
+    @include tablet-small-hp {
+      flex-direction: row;
+    }
+  }
+
+  &__logo {
+    transition: var(--transition);
+    @include hover-on {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__backdrop {
+    background: darken($bgLogo, 40%);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transform: translateX(150%);
+    transition: var(--transition);
+    opacity: 0;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    &._active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__links-container {
+    width: 100%;
+    @include tablet {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__ul,
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-wrap: nowrap;
+
+    @include tablet {
+      gap: 50rem;
+      flex-direction: column;
+    }
+
+    @include tablet-small-hp {
+      @include tablet {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__ul {
+    gap: 80rem;
+
+    @include desktop {
+      gap: 50rem;
+    }
+
+    @include desktop-small {
+      gap: 40rem;
+    }
+
+    @include tablet-small-hp {
+      @include tablet-small {
+        flex-direction: column;
+      }
+    }
+
+    @include mobile-hp {
+      @include tablet {
+        flex-direction: row;
+      }
+      @include mobile {
+        flex-direction: column;
+        padding: 0 20rem;
+        gap: 25rem;
+      }
+    }
+
+    @include mobile-small-hp {
+      @include mobile {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__btns {
+    gap: 24rem;
+
+    @include desktop {
+      gap: 20rem;
+    }
+    @include desktop-small {
+      gap: 18rem;
+    }
+    @include tablet {
+      width: 100%;
+      gap: 50rem;
+      padding: 0 200rem;
+      & a {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    @include tablet-small {
+      padding: 0 150rem;
+    }
+    @include mobile {
+      padding: 0;
+      width: 60%;
+    }
+
+    @include mobile-small {
+      gap: 25rem;
+    }
+
+    @include tablet-small-hp {
+      @include tablet {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 0 80rem;
+      }
+      @include tablet-small {
+        flex-direction: column;
+      }
+
+      @include mobile {
+        padding: 0;
+      }
+    }
+
+    @include mobile-hp {
+      @include tablet-small {
+        flex-direction: row;
+        padding: 0;
+        width: 80%;
+      }
+      @include mobile {
+        flex-direction: column;
+      }
+      @include mobile-small {
+        flex-direction: column;
+        width: 60%;
+      }
+    }
+
+    @include mobile-small-hp {
+      @include mobile {
+        flex-direction: row;
+        gap: 20rem;
+      }
+      @include mobile {
+        width: 85%;
+      }
+    }
+  }
+
+  &__logo-menu {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 80rem;
+    z-index: 9;
+
+    @include desktop-small {
+      gap: 60rem;
+    }
+
+    @include tablet {
+      z-index: 9;
+      position: fixed;
+      width: 70%;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 150rem;
+      left: 0;
+      top: 0;
+      background: $bgMenu;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(-150%);
+      transition: var(--transition);
+    }
+
+    @include mobile-hp {
+      gap: 70rem;
+    }
+
+    @include mobile-small-hp {
+      gap: 40rem;
+    }
+
+    @include mobile-hp {
+      @include mobile {
+        gap: 65rem;
+      }
+    }
+    @include mobile-small-hp {
+      @include mobile {
+        gap: 45rem;
+      }
+    }
+
+    &._active {
+      transform: translateX(0);
+    }
+
+    .icon-close {
+      position: absolute;
+      top: 40rem;
+      right: 40rem;
+      color: var(--white);
+    }
+  }
+
+  &__li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & a {
+      color: var(--c-li);
+      font: var(--f-li);
+      letter-spacing: 0.02em;
+      text-align: center;
+
+      @include tablet {
+        color: rgb(255, 255, 255);
+        font-size: 30rem;
+      }
+
+      @include mobile-small {
+        font-size: 24rem;
+      }
+
+      @include mobile-hp {
+        font-size: 24rem;
+      }
+
+      @include mobile-small-hp {
+        font-size: 20rem;
+      }
+
+      @include hover-on {
+        transition: var(--transition);
+        &:hover {
+          color: var(--c-primary);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &__btn-login,
+  &__btn-sign {
+    padding: 13rem 50rem;
+    font: var(--f-li);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    @include tablet {
+      width: 100%;
+      font-size: 26rem;
+    }
+
+    @include mobile {
+      padding: 13rem 30rem;
+    }
+
+    @include mobile-small {
+      font-size: 24rem;
+    }
+
+    @include mobile-hp {
+      font-size: 24rem;
+    }
+
+    @include mobile-small-hp {
+      @include mobile {
+        padding: 10rem 15rem;
+        font-size: 20rem;
+      }
+    }
+  }
+
+  &__btn-login {
+    border-radius: 80rem;
+    box-shadow: 0rem 20rem 24rem 0rem rgba(0, 0, 0, 0.03);
+    background: hwb(0 100% 0%);
+    color: rgb(108, 108, 108);
+  }
+
+  &__btn-sign {
+    color: var(--white);
+    border-radius: 80rem;
+    background: var(--c-primary);
+  }
+}
+.icon-menu,
+.icon-close {
+  cursor: pointer;
+  display: none;
+  color: var(--c-li);
+  font-size: 36rem;
+
+  @include tablet {
+    display: inline-block;
+  }
+}

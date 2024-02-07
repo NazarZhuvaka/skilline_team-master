@@ -1,0 +1,74 @@
+:root {
+  --ff: "Poppins", sans-serif;
+  --ff-secondary: "Nunito Sans", sans-serif;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --c-primary: #f48c06;
+  --c-secondery: #2f327d;
+  --c-nav-header: #252641;
+  --bg-header: #fff3e4;
+
+  --f-title: normal 700 36rem/180% var(--ff);
+
+  --c-desc: rgb(105, 105, 132);
+  --f-desc: normal 400 24rem/180% var(--ff);
+  --f-title-desc: normal 500 30rem/150% var(--ff);
+
+  --f-title-welcome: normal 700 54rem/150% var(--ff);
+  --f-btn-play: normal 400 24rem/36rem var(--ff);
+  --f-btn-welcome: normal 600 24rem/36rem var(--ff);
+
+  --transition: 0.2s all ease-in-out;
+
+  --f-li: normal 400 22rem/33rem var(--ff);
+  --c-li: rgb(37, 38, 65);
+
+  --c-ph-input: rgb(131, 131, 154);
+  --f-ph-input: normal 400 20rem/150% var(--ff);
+
+  --ff-secondary-700-36: 700 36rem / normal var(--ff-secondary);
+  --ff-secondary-400-24: 400 24rem / normal var(--ff-secondary);
+
+  --ff-400-18: 400 18rem / normal var(--ff);
+  --ff-400-20: 400 20rem / normal var(--ff);
+  --ff-500-20: 500 20rem / normal var(--ff);
+  --ff-500-22: 500 22rem / normal var(--ff);
+  --ff-500-26: 500 26rem / normal var(--ff);
+
+  --bg-footer: rgb(37, 38, 65);
+  --c-footer: rgb(178, 179, 207);
+  --f-foter: normal 400 22rem/150% var(--ff);
+  --f-foter-btn: normal 500 22rem/150% var(--ff);
+  --border-footer: 1rem solid rgb(98, 99, 129);
+}
+
+$colorTitle: #2f327d;
+$colorDesc: #696984;
+$colorBtn: #252641;
+$colorActive: green;
+$backgroundBtn: #f4c467;
+$bgLogo: rgb(101, 218, 255);
+$bgMenu: rgba(47, 50, 125, 0.95);
+$black: #000000;
+
+@include desktop-small {
+  :root {
+    --f-btn-play: normal 400 20rem/30rem var(--ff);
+    --f-btn-welcome: normal 600 20rem/30rem var(--ff);
+  }
+}
+
+@include tablet-small {
+  :root {
+    --f-btn-play: normal 400 20rem/25rem var(--ff);
+    --f-btn-welcome: normal 600 18rem/25rem var(--ff);
+  }
+}
+
+@include tablet-small {
+  :root {
+    --f-title-welcome: normal 700 44rem/130% var(--ff);
+  }
+}
